@@ -19,8 +19,8 @@
 }
 
 .pill {
-  background: #FFFFFF;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
   color: var(--text-secondary);
   padding: 0.6rem 1.2rem;
   border-radius: 100px;
@@ -33,7 +33,7 @@
 }
 
 .pill:hover {
-  background: #f9fafb;
+  background: var(--bg-color);
   transform: translateY(-1px);
 }
 

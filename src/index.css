@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
 
 :root {
+  /* Light Mode Variables */
   --bg-color: #FFFFFF;
   --text-main: #00171F;
+  --surface-color: #FFFFFF;
+  --border-color: rgba(0, 52, 89, 0.15); /* #003459 with opacity */
   --text-secondary: #003459;
   --accent-color: #007EA7;
   --accent-light: #00A8E8;
@@ -10,6 +13,17 @@
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --radius: 8px;
+}
+
+:root.dark {
+  /* Dark Mode Variables */
+  --bg-color: #00171F;
+  --text-main: #FFFFFF;
+  --surface-color: #003459;
+  --border-color: rgba(0, 126, 167, 0.3); /* #007EA7 with opacity */
+  --text-secondary: #00A8E8;
+  --accent-color: #007EA7;
+  --accent-light: #00A8E8;
 }
 
 body {

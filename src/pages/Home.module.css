@@ -31,8 +31,8 @@
 }
 
 .toggleButton {
-  background: #f3f4f6;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
   color: var(--text-secondary);
   padding: 0.8rem 2rem;
   border-radius: 100px;
@@ -45,7 +45,7 @@
 }
 
 .toggleButton:hover {
-  background: #e5e7eb;
+  background: var(--bg-color);
 }
 
 .toggleButton.active {
@@ -66,8 +66,8 @@
   padding: 1rem 1rem 1rem 3.5rem;
   font-size: 1.1rem;
   border-radius: 100px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  background: #FFFFFF;
+  border: 1px solid var(--border-color);
+  background: var(--surface-color);
   color: var(--text-main);
   outline: none;
   font-family: 'Inter', sans-serif;
@@ -100,7 +100,7 @@
 
 .resultsHeader {
   margin: 0.5rem 0 1.5rem 0;
-  border-bottom: 2px solid #f3f4f6;
+  border-bottom: 2px solid var(--border-color);
   padding-bottom: 0.5rem;
 }
 
