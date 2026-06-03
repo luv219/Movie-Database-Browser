@@ -12,7 +12,7 @@ function Navbar() {
         </Link>
         <div className={styles.links}>
           <Link to="/" className={styles.navLink}>Home</Link>
-          <Link to="/favorites" className={styles.navLink}>Favorites</Link>
+          <Link to="/favorites" className={styles.navLink}>My Favorites</Link>
         </div>
       </div>
     </nav>

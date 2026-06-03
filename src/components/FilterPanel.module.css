@@ -19,33 +19,34 @@
 }
 
 .pill {
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  color: var(--text-main);
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: var(--text-secondary);
   padding: 0.6rem 1.2rem;
   border-radius: 100px;
   font-size: 0.95rem;
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Inter', sans-serif;
   cursor: pointer;
   transition: all 0.2s ease;
   white-space: nowrap;
+  box-shadow: var(--shadow-sm);
 }
 
 .pill:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-2px);
+  background: #f9fafb;
+  transform: translateY(-1px);
 }
 
 .pill.active {
   background: var(--accent-color);
   border-color: var(--accent-color);
-  box-shadow: 0 4px 15px var(--accent-glow);
+  box-shadow: var(--shadow-md);
   color: white;
   font-weight: 600;
 }
 
 .skeleton {
-  color: var(--text-muted);
+  color: var(--text-secondary);
   font-size: 0.9rem;
   padding: 1rem 0;
 }

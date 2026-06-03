@@ -1,11 +1,11 @@
 .navbar {
-  background: var(--glass-bg);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--glass-border);
+  background: var(--text-secondary);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 100;
   padding: 1rem 0;
+  box-shadow: var(--shadow-md);
   transition: all 0.3s ease;
 }
 
@@ -21,20 +21,16 @@
 .logo {
   font-size: 1.5rem;
   font-weight: 800;
-  color: var(--text-main);
+  color: var(--accent-color);
   text-decoration: none;
   display: flex;
   align-items: center;
   gap: 0.5rem;
   letter-spacing: -0.5px;
-  background: linear-gradient(135deg, #fff, #a5b4fc);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .icon {
   font-size: 1.8rem;
-  -webkit-text-fill-color: initial;
 }
 
 .links {
@@ -43,18 +39,19 @@
 }
 
 .navLink {
-  color: var(--text-muted);
+  color: #FFFFFF;
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
-  transition: color 0.2s ease, text-shadow 0.2s ease;
+  transition: color 0.2s ease;
   padding: 0.5rem 0;
   position: relative;
+  opacity: 0.85;
 }
 
 .navLink:hover {
-  color: var(--text-main);
-  text-shadow: 0 0 12px var(--accent-glow);
+  color: #FFFFFF;
+  opacity: 1;
 }
 
 .navLink::after {
@@ -64,9 +61,8 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--accent-color);
+  background: var(--accent-light);
   transition: width 0.3s ease;
-  box-shadow: 0 0 8px var(--accent-glow);
 }
 
 .navLink:hover::after {

@@ -1,18 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
 
 :root {
-  --bg-color: #0d0f12;
-  --text-main: #f3f4f6;
-  --text-muted: #9ca3af;
-  --accent-color: #6366f1;
-  --accent-glow: rgba(99, 102, 241, 0.4);
-  --glass-bg: rgba(255, 255, 255, 0.05);
-  --glass-border: rgba(255, 255, 255, 0.1);
+  --bg-color: #FFFFFF;
+  --text-main: #00171F;
+  --text-secondary: #003459;
+  --accent-color: #007EA7;
+  --accent-light: #00A8E8;
+  
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --radius: 8px;
 }
 
 body {
   margin: 0;
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Inter', sans-serif;
   background-color: var(--bg-color);
   color: var(--text-main);
   -webkit-font-smoothing: antialiased;
@@ -43,6 +45,12 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0 0 1rem 0;
+  color: var(--text-main);
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent-color);
 }
