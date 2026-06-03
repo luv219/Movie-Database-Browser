@@ -50,11 +50,11 @@ function MovieDetails() {
 
   // Safe image fallbacks if TMDB paths are null
   const backdropUrl = movie.backdrop_path 
-    ? `https://image.themoviedb.org/t/p/original${movie.backdrop_path}`
+    ? `https://image.tmdb.org/t/p/original${movie.backdrop_path}`
     : 'https://via.placeholder.com/1920x1080?text=No+Backdrop';
     
   const posterUrl = movie.poster_path 
-    ? `https://image.themoviedb.org/t/p/w500${movie.poster_path}`
+    ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
     : 'https://via.placeholder.com/500x750?text=No+Poster';
 
   // Format runtime nicely
@@ -117,7 +117,7 @@ function MovieDetails() {
                 <div className={styles.castGrid}>
                   {topCast.map(actor => {
                     const actorImage = actor.profile_path
-                      ? `https://image.themoviedb.org/t/p/w185${actor.profile_path}`
+                      ? `https://image.tmdb.org/t/p/w185${actor.profile_path}`
                       : 'https://via.placeholder.com/185x278?text=No+Photo';
                       
                     return (
