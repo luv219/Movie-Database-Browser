@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { fetchGenres } from '../services/api';
+import { fetchGenres, fetchTVGenres } from '../services/api';
 import styles from './FilterPanel.module.css';
 
-function FilterPanel({ activeGenreId, onSelectGenre }) {
+function FilterPanel({ activeGenreId, onSelectGenre, mediaType = 'movie' }) {
   const [genres, setGenres] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const loadGenres = async () => {
       try {
-        const data = await fetchGenres();
+        setIsLoading(true);
+        const data = mediaType === 'tv' ? await fetchTVGenres() : await fetchGenres();
         setGenres(data);
       } catch (err) {
         console.error('Failed to load genres', err);
@@ -18,7 +19,7 @@ function FilterPanel({ activeGenreId, onSelectGenre }) {
       }
     };
     loadGenres();
-  }, []);
+  }, [mediaType]);
 
   if (isLoading) return <div className={styles.skeleton}>Loading genres...</div>;
 
@@ -29,7 +30,7 @@ function FilterPanel({ activeGenreId, onSelectGenre }) {
           className={`${styles.pill} ${!activeGenreId ? styles.active : ''}`}
           onClick={() => onSelectGenre(null)}
         >
-          All Movies
+          All {mediaType === 'tv' ? 'TV Shows' : 'Movies'}
         </button>
         {genres.map(genre => (
           <button
